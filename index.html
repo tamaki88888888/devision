@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+<title>事業部ページ</title>
+</head>
+	<style type="text/css">
+
+/* A Modern CSS Reset */
+*,*::before,*::after{box-sizing:border-box}ul[class],ol[class]{padding:0}body,h1,h2,h3,h4,p,ul[class],ol[class],figure,blockquote,dl,dd{margin:0}body{min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed;line-height:1.5}ul[class],ol[class]{list-style:none}a:not([class]){text-decoration-skip-ink:auto}img{max-width:100%;display:block}article>*+*{margin-top:1em}input,button,textarea,select{font:inherit}img:not([alt]){filter:blur(10px)}@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}}
+
+
+
+
+
+
+
+
+
+
+.rotate-position{
+  position: absolute;
+  top:40%;
+  right: 50%;
+}
+.center-postision{
+  position: relative;
+}
+li{
+  list-style-type: none;
+}
+.red {
+  position: absolute;
+  background: red;
+  height: 50px;
+  width: 50px;
+}
+.blue {
+  position: absolute;
+  background: blue;
+  height: 50px;
+  width: 50px;
+}
+.yellow {
+  position: absolute;
+  background: yellow;
+  height: 50px;
+  width: 50px;
+}
+.green {
+  position: absolute;
+  background: green;
+  height: 50px;
+  width: 50px;
+}
+
+.rotate{
+transition: all 2s ease;
+}
+
+.center{
+  transform: translate(0, 100px);
+}
+.right{
+  transform: translate(100px, 0px);
+}
+.left{
+  transform: translate(-100px, 0px);
+}
+.back{
+  transform: translate(0, -100px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.img{
+	width:100px;
+}
+
+.div-titlebox{
+  background-color: #efefef;
+  text-align: center;
+	position: relative;
+}
+
+.div-title{
+	padding: 25px 0px 5px;
+    font-size: 17px;
+}
+
+.div-title-sub{
+    font-size: 12px;
+    padding-bottom: 15px;
+}
+
+.div-imgbox{
+    position: absolute;
+    width: 90px;
+    right: 30px;
+    top: 21px;
+}
+
+.div-content{
+	background-color: black;
+}
+
+.div-content-bg{
+	background:url(img/div-spotlight.png) center top no-repeat;
+  background-size: cover;
+    width: 50%;
+  height: 305px;
+  width: 100%;
+  background-position-y: -105px;
+}
+
+.div-pramon{
+    max-width: 500px;
+}
+
+.division-related{
+    padding: 20px;
+}
+
+.div-service-box{
+	display: block;
+	jsutify-content:space-between;
+}
+
+.div-service-wrap{
+	background: orange;
+  padding: 10px;
+  margin: 5px;
+}
+
+.div-service-imgbox{
+  margin: auto;
+  width: 300px;
+  height: 230px;
+}
+
+.div-service-btn-text{
+		margin: 15px auto;
+    width: 300px;
+    border: 3px solid black;
+    font-size: 16px;
+    text-align: center;
+    padding: 8px;
+    font-weight: bold;
+}
+
+.div-related-title{
+    text-align: center;
+    font-size: 17px;
+    padding: 20px 0px;
+}
+
+@media screen and (min-width: 980px) {
+.div-content-bg {
+    width: 50%;
+}
+.div-pramon{
+		position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(-140px, 150px);
+}
+.div-content-bg{
+    width: 50%;
+    height: 465px;
+    background-position-y: -325px;
+}
+.div-service-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.div-service-wrap {
+    margin: 25px;
+}
+
+.div-related-title {
+    text-align: center;
+    font-size: 25px;
+    padding: 20px 0px;
+}
+
+.div-title {
+    font-size: 25px;
+}
+.div-title-sub {
+    font-size: 17px;
+}
+
+}
+
+
+	</style>
+<body>
+	<section class="division-intro">
+		<div class="div-titlebox">
+			<h1 class="div-title">プラコレの事業部を紹介</h1>
+			<p class="div-title-sub">気になるプラモンをチェックしてみよう</p>
+			<div class="div-imgbox">
+				<img class="div-title-img" src="img/btn-about-pramon.png" alt="プラモンとは？">
+			</div>
+
+		</div>
+		<div class="div-content">
+			<div class="div-content-bg">
+				<p class="Next→事業部"></p>
+				<div class="swiperbox">
+				</div>
+			</div>	
+		</div>
+		<div class="div-pramon">
+			<img class="img-about-pramon" src="img/about-next.jpg" alt="Next事業部のキャラクター「ネコスト！！」">
+		</div>
+
+	</section>
+	<section class="division-related">
+		<h2 class="div-related-title">この事業部が関係しているサービス</h2>
+		<div class="div-service-box">
+
+
+
+<button class="" onclick="moveRight()">migi</button>
+<button class="" onclick="moveLeft()">hidari</button>
+
+<div class="rotate-position">
+  <ul class="center-position">
+    <li class="red rotate center"></li>
+    <li class="blue rotate right"></li>
+    <li class="yellow rotate back"></li>
+    <li class="green rotate left"></li>
+  </ul>
+</div>
+
+
+			<div class="div-service-wrap">
+				<div class="div-service-imgbox">
+					<img class="img-about-pramon" src="img/about-next.jpg" alt="Next事業部のキャラクター「ネコスト！！」">
+				</div>
+				<div class="div-service-btn">
+					<p class="div-service-btn-text">制作実績はこちら</p>
+				</div>
+			</div>
+			<div class="div-service-wrap">
+				<div class="div-service-imgbox">
+					<img class="img-about-pramon" src="img/about-next.jpg" alt="Next事業部のキャラクター「ネコスト！！」">
+				</div>
+				<div class="div-service-btn">
+					<p class="div-service-btn-text">制作実績はこちら</p>
+				</div>
+			</div>
+			<div class="div-service-wrap">
+				<div class="div-service-imgbox">
+					<img class="img-about-pramon" src="img/about-next.jpg" alt="Next事業部のキャラクター「ネコスト！！」">
+				</div>
+				<div class="div-service-btn">
+					<p class="div-service-btn-text">制作実績はこちら</p>
+				</div>
+			</div>
+			<div class="div-service-wrap">
+				<div class="div-service-imgbox">
+					<img class="img-about-pramon" src="img/about-next.jpg" alt="Next事業部のキャラクター「ネコスト！！」">
+				</div>
+				<div class="div-service-btn">
+					<p class="div-service-btn-text">制作実績はこちら</p>
+				</div>
+			</div>
+			<div class="div-service-wrap">
+				<div class="div-service-imgbox">
+					<img class="img-about-pramon" src="img/about-next.jpg" alt="Next事業部のキャラクター「ネコスト！！」">
+				</div>
+				<div class="div-service-btn">
+					<p class="div-service-btn-text">制作実績はこちら</p>
+				</div>
+			</div>
+			<div class="div-service-wrap">
+				<div class="div-service-imgbox">
+					<img class="img-about-pramon" src="img/about-next.jpg" alt="Next事業部のキャラクター「ネコスト！！」">
+				</div>
+				<div class="div-service-btn">
+					<p class="div-service-btn-text">制作実績はこちら</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script
+  	src="https://code.jquery.com/jquery-3.5.0.js"
+  	integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+  	crossorigin="anonymous"></script>
+	<script type="text/javascript" src="division.js"></script>
+</body>
+</html>
